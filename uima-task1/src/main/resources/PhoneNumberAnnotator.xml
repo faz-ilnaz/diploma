@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
@@ -9,9 +8,28 @@
 		<name>Phone Number Annotator</name>
 		<description>An example annotator that searches for phone numbers</description>
 		<version>1.0</version>
-		<vendor></vendor>
+		<vendor/>
 		
-		<!-- TypeSystem Definition -->
+		<configurationParameters>
+			<configurationParameter>
+				<name>Patterns</name>
+				<description>List of phone number regular expression pattterns.</description>
+				<type>String</type>
+				<multiValued>true</multiValued>
+				<mandatory>true</mandatory>
+			</configurationParameter>
+		</configurationParameters>
+    <configurationParameterSettings>
+			<nameValuePair>
+				<name>Patterns</name>
+				<value>
+					<array>
+						<string>((8)|(\+7))*[\d]{10}</string>
+					</array>
+				</value>
+			</nameValuePair>
+		</configurationParameterSettings>
+    <!-- TypeSystem Definition -->
 		<typeSystemDescription>
 			<imports>
 				<import location="Task1TypeSystem.xml"/>
@@ -26,7 +44,8 @@
 					<type>edu.kpfu.itis.task1.PhoneNumber</type>
 					<feature>edu.kpfu.itis.task1.PhoneNumber:phoneNumber</feature>
 				</outputs>
-			</capability>
+			<languagesSupported/>
+      </capability>
 		</capabilities>
 		<operationalProperties>
 			<modifiesCas>true</modifiesCas>
