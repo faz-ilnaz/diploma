@@ -14,12 +14,12 @@ import org.apache.uima.jcas.tcas.Annotation;
  * Updated by JCasGen Tue Feb 09 19:38:23 MSK 2016
  * XML source: C:/Users/ilnaz/workspace/uima-task1/src/main/resources/Task1TypeSystem.xml
  * @generated */
-public class PhoneNumber extends Annotation {
+public class Email extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(PhoneNumber.class);
+  public final static int typeIndexID = JCasRegistry.register(Email.class);
   /** @generated
    * @ordered 
    */
@@ -33,14 +33,14 @@ public class PhoneNumber extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected PhoneNumber() {/* intentionally empty block */}
+  protected Email() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
-  public PhoneNumber(int addr, TOP_Type type) {
+  public Email(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
@@ -48,7 +48,7 @@ public class PhoneNumber extends Annotation {
   /** @generated
    * @param jcas JCas to which this Feature Structure belongs 
    */
-  public PhoneNumber(JCas jcas) {
+  public Email(JCas jcas) {
     super(jcas);
     readObject();   
   } 
@@ -58,7 +58,7 @@ public class PhoneNumber extends Annotation {
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
   */  
-  public PhoneNumber(JCas jcas, int begin, int end) {
+  public Email(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -77,25 +77,25 @@ public class PhoneNumber extends Annotation {
  
     
   //*--------------*
-  //* Feature: phoneNumber
+  //* Feature: emailAddress
 
-  /** getter for phoneNumber - gets 
+  /** getter for emailAddress - gets 
    * @generated
    * @return value of the feature 
    */
-  public String getPhoneNumber() {
-    if (PhoneNumber_Type.featOkTst && ((PhoneNumber_Type)jcasType).casFeat_phoneNumber == null)
-      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((PhoneNumber_Type)jcasType).casFeatCode_phoneNumber);}
+  public String getEmailAddress() {
+    if (Email_Type.featOkTst && ((Email_Type)jcasType).casFeat_emailAddress == null)
+      jcasType.jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Email_Type)jcasType).casFeatCode_emailAddress);}
     
-  /** setter for phoneNumber - sets  
+  /** setter for emailAddress - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setPhoneNumber(String v) {
-    if (PhoneNumber_Type.featOkTst && ((PhoneNumber_Type)jcasType).casFeat_phoneNumber == null)
-      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
-    jcasType.ll_cas.ll_setStringValue(addr, ((PhoneNumber_Type)jcasType).casFeatCode_phoneNumber, v);}    
+  public void setEmailAddress(String v) {
+    if (Email_Type.featOkTst && ((Email_Type)jcasType).casFeat_emailAddress == null)
+      jcasType.jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Email_Type)jcasType).casFeatCode_emailAddress, v);}    
   }
 
     

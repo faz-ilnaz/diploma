@@ -16,7 +16,7 @@ import org.apache.uima.jcas.tcas.Annotation_Type;
 /** 
  * Updated by JCasGen Tue Feb 09 19:38:23 MSK 2016
  * @generated */
-public class PhoneNumber_Type extends Annotation_Type {
+public class Email_Type extends Annotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -26,47 +26,47 @@ public class PhoneNumber_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (PhoneNumber_Type.this.useExistingInstance) {
+  			 if (Email_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = PhoneNumber_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Email_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new PhoneNumber(addr, PhoneNumber_Type.this);
-  			   PhoneNumber_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Email(addr, Email_Type.this);
+  			   Email_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new PhoneNumber(addr, PhoneNumber_Type.this);
+        } else return new Email(addr, Email_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = PhoneNumber.typeIndexID;
+  public final static int typeIndexID = Email.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.PhoneNumber");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.Email");
  
   /** @generated */
-  final Feature casFeat_phoneNumber;
+  final Feature casFeat_emailAddress;
   /** @generated */
-  final int     casFeatCode_phoneNumber;
+  final int     casFeatCode_emailAddress;
   /** @generated
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
-  public String getPhoneNumber(int addr) {
-        if (featOkTst && casFeat_phoneNumber == null)
-      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_phoneNumber);
+  public String getEmailAddress(int addr) {
+        if (featOkTst && casFeat_emailAddress == null)
+      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_emailAddress);
   }
   /** @generated
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
-  public void setPhoneNumber(int addr, String v) {
-        if (featOkTst && casFeat_phoneNumber == null)
-      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
-    ll_cas.ll_setStringValue(addr, casFeatCode_phoneNumber, v);}
+  public void setEmailAddress(int addr, String v) {
+        if (featOkTst && casFeat_emailAddress == null)
+      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+    ll_cas.ll_setStringValue(addr, casFeatCode_emailAddress, v);}
     
   
 
@@ -77,13 +77,13 @@ public class PhoneNumber_Type extends Annotation_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public PhoneNumber_Type(JCas jcas, Type casType) {
+  public Email_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_phoneNumber = jcas.getRequiredFeatureDE(casType, "phoneNumber", "uima.cas.String", featOkTst);
-    casFeatCode_phoneNumber  = (null == casFeat_phoneNumber) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_phoneNumber).getCode();
+    casFeat_emailAddress = jcas.getRequiredFeatureDE(casType, "emailAddress", "uima.cas.String", featOkTst);
+    casFeatCode_emailAddress  = (null == casFeat_emailAddress) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_emailAddress).getCode();
 
   }
 }
