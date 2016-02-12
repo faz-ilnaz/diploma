@@ -36,3 +36,5 @@ Apache UIMA project Mentors:
 
 Ken Coar (ASF member and Vice President)
 Sam Ruby (ASF member)
+
+#uima #apache #java

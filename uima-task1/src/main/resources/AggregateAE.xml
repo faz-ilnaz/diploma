@@ -12,16 +12,21 @@
 		<delegateAnalysisEngine key="Email">
 			<import location="EmailAnnotator.xml" />
 		</delegateAnalysisEngine>
+
+		<delegateAnalysisEngine key="Hashtag">
+			<import location="HashtagAnnotator.xml" />
+		</delegateAnalysisEngine>
 	</delegateAnalysisEngineSpecifiers>
 
 	<analysisEngineMetaData>
-		<name>Aggregate TAE - PhoneNumber and Email Annotators</name>
-		<description>Detects Phone Numbers, Emails</description>
+		<name>Aggregate TAE - PhoneNumber, Email, Hashtag Annotators</name>
+		<description>Detects Phone Numbers, Emails and Hashtags</description>
 		
 		<flowConstraints>
 			<fixedFlow>
 				<node>PhoneNumber</node>
 				<node>Email</node>
+				<node>Hashtag</node>
 			</fixedFlow>
 		</flowConstraints>
 		
@@ -33,6 +38,8 @@
 						edu.kpfu.itis.task1.PhoneNumber</type>
 					<type allAnnotatorFeatures="true">
 						edu.kpfu.itis.task1.Email</type>
+					<type allAnnotatorFeatures="true">
+						edu.kpfu.itis.task1.Hashtag</type>
 				</outputs>
 				<languagesSupported>
 					<language>en</language>
