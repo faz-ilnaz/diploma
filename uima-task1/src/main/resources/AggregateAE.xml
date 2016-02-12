@@ -1,32 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-   
-<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>false</primitive>
 
 	<delegateAnalysisEngineSpecifiers>
 		<delegateAnalysisEngine key="PhoneNumber">
-			<import location="PhoneNumberAnnotator.xml" />
+			<import location="PhoneNumberAnnotator.xml"/>
 		</delegateAnalysisEngine>
 
 		<delegateAnalysisEngine key="Email">
-			<import location="EmailAnnotator.xml" />
+			<import location="EmailAnnotator.xml"/>
 		</delegateAnalysisEngine>
 
 		<delegateAnalysisEngine key="Hashtag">
-			<import location="HashtagAnnotator.xml" />
+			<import location="HashtagAnnotator.xml"/>
+		</delegateAnalysisEngine>
+		<delegateAnalysisEngine key="URL">
+			<import location="URLAnnotator.xml"/>
 		</delegateAnalysisEngine>
 	</delegateAnalysisEngineSpecifiers>
 
 	<analysisEngineMetaData>
-		<name>Aggregate TAE - PhoneNumber, Email, Hashtag Annotators</name>
-		<description>Detects Phone Numbers, Emails and Hashtags</description>
+		<name>Aggregate TAE - PhoneNumber, Email, Hashtag and URL Annotators</name>
+		<description>Detects Phone Numbers, Emails, Hashtags and URLs</description>
 		
-		<flowConstraints>
+		<configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
 			<fixedFlow>
 				<node>PhoneNumber</node>
 				<node>Email</node>
 				<node>Hashtag</node>
+				<node>URL</node>
 			</fixedFlow>
 		</flowConstraints>
 		
@@ -34,12 +39,10 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type allAnnotatorFeatures="true">
-						edu.kpfu.itis.task1.PhoneNumber</type>
-					<type allAnnotatorFeatures="true">
-						edu.kpfu.itis.task1.Email</type>
-					<type allAnnotatorFeatures="true">
-						edu.kpfu.itis.task1.Hashtag</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.PhoneNumber</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.Email</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.Hashtag</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.URL</type>
 				</outputs>
 				<languagesSupported>
 					<language>en</language>
@@ -52,4 +55,5 @@
 			<outputsNewCASes>false</outputsNewCASes>
 		</operationalProperties>
 	</analysisEngineMetaData>
+<resourceManagerConfiguration/>
 </analysisEngineDescription>

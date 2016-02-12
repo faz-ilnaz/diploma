@@ -40,5 +40,17 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>edu.kpfu.itis.task1.URL</name>
+			<description/>
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>url</name>
+					<description/>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>

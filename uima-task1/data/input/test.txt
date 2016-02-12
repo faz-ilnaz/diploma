@@ -15,6 +15,12 @@ We invite and encourage you to participate in both the implementation and specif
 UIMA is a component framework for analysing unstructured content such as text, audio and video. 
 It comprises an SDK and tooling for composing and running analytic components written in Java and C++, with some support for Perl, Python and TCL. 
 
+http://uima.apache.org/d/uimaj-current/tutorials_and_users_guides.html
+http://uima.apache.org/d/uimaj-current/references.html
+http://www.uima.apache.org/
+www.uima.apache.org/
+https://google.com
+
 
 Apache UIMA mailing lists:
 
