@@ -1,4 +1,4 @@
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,10 +11,10 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
 
-public class HashtagAnnotator extends JCasAnnotator_ImplBase {
+public class PhoneNumberAnnotator extends JCasAnnotator_ImplBase {
 	
 	private Pattern[] mPatterns;
-
+	
 	/**
 	   * @see AnalysisComponent#initialize(UimaContext)
 	   */
@@ -29,7 +29,7 @@ public class HashtagAnnotator extends JCasAnnotator_ImplBase {
 	      mPatterns[i] = Pattern.compile(patternStrings[i]);
 	    }
 	  }
-	  
+
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		// get document text
@@ -40,14 +40,15 @@ public class HashtagAnnotator extends JCasAnnotator_ImplBase {
 	      Matcher matcher = mPatterns[i].matcher(docText);
 	      while (matcher.find()) {
 	        // found one - create annotation
-	    	Hashtag annotation = new Hashtag(aJCas);
+	    	PhoneNumber annotation = new PhoneNumber(aJCas);
 	        annotation.setBegin(matcher.start());
 	        annotation.setEnd(matcher.end());
 	        annotation.addToIndexes();
-	        annotation.setHashtag(docText.substring(annotation.getBegin(), annotation.getEnd()));
+	        annotation.setPhoneNumber(docText.substring(annotation.getBegin(), annotation.getEnd()));
 	        getContext().getLogger().log(Level.FINEST, "Found: " + annotation);
 	      }
-	    }		
+	    }
+
 	}
 
 }

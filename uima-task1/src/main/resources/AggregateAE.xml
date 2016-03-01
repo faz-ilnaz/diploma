@@ -39,10 +39,10 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.PhoneNumber</type>
-					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.Email</type>
-					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.Hashtag</type>
-					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.URL</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.models.PhoneNumber</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.models.Email</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.models.Hashtag</type>
+					<type allAnnotatorFeatures="true">edu.kpfu.itis.task1.models.URL</type>
 				</outputs>
 				<languagesSupported>
 					<language>en</language>

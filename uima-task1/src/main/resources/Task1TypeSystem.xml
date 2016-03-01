@@ -5,7 +5,7 @@
 	<version>1.0</version>
   <types>
 		<typeDescription>
-			<name>edu.kpfu.itis.task1.PhoneNumber</name>
+			<name>edu.kpfu.itis.task1.models.PhoneNumber</name>
 			<description/>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>
@@ -17,7 +17,7 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>edu.kpfu.itis.task1.Email</name>
+			<name>edu.kpfu.itis.task1.models.Email</name>
 			<description/>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>
@@ -29,7 +29,7 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>edu.kpfu.itis.task1.Hashtag</name>
+			<name>edu.kpfu.itis.task1.models.Hashtag</name>
 			<description/>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>
@@ -41,7 +41,7 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>edu.kpfu.itis.task1.URL</name>
+			<name>edu.kpfu.itis.task1.models.URL</name>
 			<description/>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>

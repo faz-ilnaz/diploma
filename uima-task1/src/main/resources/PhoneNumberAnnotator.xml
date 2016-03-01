@@ -2,7 +2,7 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
-	<annotatorImplementationName>edu.kpfu.itis.task1.PhoneNumberAnnotator</annotatorImplementationName>
+	<annotatorImplementationName>edu.kpfu.itis.task1.models.PhoneNumberAnnotator</annotatorImplementationName>
 
 	<analysisEngineMetaData>
 		<name>Phone Number Annotator</name>
@@ -41,7 +41,7 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type>edu.kpfu.itis.task1.PhoneNumber</type>
+					<type>edu.kpfu.itis.task1.models.PhoneNumber</type>
 					<feature>edu.kpfu.itis.task1.PhoneNumber:phoneNumber</feature>
 				</outputs>
 			<languagesSupported/>

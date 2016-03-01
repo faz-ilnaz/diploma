@@ -1,7 +1,7 @@
 
 
 /* First created by JCasGen Tue Feb 09 19:38:23 MSK 2016 */
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -85,7 +85,7 @@ public class PhoneNumber extends Annotation {
    */
   public String getPhoneNumber() {
     if (PhoneNumber_Type.featOkTst && ((PhoneNumber_Type)jcasType).casFeat_phoneNumber == null)
-      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
+      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.models.PhoneNumber");
     return jcasType.ll_cas.ll_getStringValue(addr, ((PhoneNumber_Type)jcasType).casFeatCode_phoneNumber);}
     
   /** setter for phoneNumber - sets  
@@ -94,7 +94,7 @@ public class PhoneNumber extends Annotation {
    */
   public void setPhoneNumber(String v) {
     if (PhoneNumber_Type.featOkTst && ((PhoneNumber_Type)jcasType).casFeat_phoneNumber == null)
-      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
+      jcasType.jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.models.PhoneNumber");
     jcasType.ll_cas.ll_setStringValue(addr, ((PhoneNumber_Type)jcasType).casFeatCode_phoneNumber, v);}    
   }
 

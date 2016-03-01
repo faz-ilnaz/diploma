@@ -2,7 +2,7 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
-	<annotatorImplementationName>edu.kpfu.itis.task1.HashtagAnnotator</annotatorImplementationName>
+	<annotatorImplementationName>edu.kpfu.itis.task1.models.HashtagAnnotator</annotatorImplementationName>
 
 	<analysisEngineMetaData>
 		<name>Hashtag Annotator</name>
@@ -41,7 +41,7 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type>edu.kpfu.itis.task1.Hashtag</type>
+					<type>edu.kpfu.itis.task1.models.Hashtag</type>
 					<feature>edu.kpfu.itis.task1.Hashtag:hashtag</feature>
 				</outputs>
 			<languagesSupported/>

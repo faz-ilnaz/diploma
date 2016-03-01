@@ -1,7 +1,7 @@
 
 
 /* First created by JCasGen Fri Feb 12 21:43:38 MSK 2016 */
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -85,7 +85,7 @@ public class URL extends Annotation {
    */
   public String getUrl() {
     if (URL_Type.featOkTst && ((URL_Type)jcasType).casFeat_url == null)
-      jcasType.jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.URL");
+      jcasType.jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.models.URL");
     return jcasType.ll_cas.ll_getStringValue(addr, ((URL_Type)jcasType).casFeatCode_url);}
     
   /** setter for url - sets  
@@ -94,7 +94,7 @@ public class URL extends Annotation {
    */
   public void setUrl(String v) {
     if (URL_Type.featOkTst && ((URL_Type)jcasType).casFeat_url == null)
-      jcasType.jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.URL");
+      jcasType.jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.models.URL");
     jcasType.ll_cas.ll_setStringValue(addr, ((URL_Type)jcasType).casFeatCode_url, v);}    
   }
 

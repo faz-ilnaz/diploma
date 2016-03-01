@@ -1,6 +1,6 @@
 
 /* First created by JCasGen Tue Feb 09 19:38:23 MSK 2016 */
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -44,7 +44,7 @@ public class Email_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.Email");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.models.Email");
  
   /** @generated */
   final Feature casFeat_emailAddress;
@@ -56,7 +56,7 @@ public class Email_Type extends Annotation_Type {
    */ 
   public String getEmailAddress(int addr) {
         if (featOkTst && casFeat_emailAddress == null)
-      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.models.Email");
     return ll_cas.ll_getStringValue(addr, casFeatCode_emailAddress);
   }
   /** @generated
@@ -65,7 +65,7 @@ public class Email_Type extends Annotation_Type {
    */    
   public void setEmailAddress(int addr, String v) {
         if (featOkTst && casFeat_emailAddress == null)
-      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.Email");
+      jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.models.Email");
     ll_cas.ll_setStringValue(addr, casFeatCode_emailAddress, v);}
     
   

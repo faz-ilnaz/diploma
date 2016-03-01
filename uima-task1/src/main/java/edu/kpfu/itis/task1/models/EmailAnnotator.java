@@ -1,4 +1,4 @@
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
 
-public class URLAnnotator extends JCasAnnotator_ImplBase {
+public class EmailAnnotator extends JCasAnnotator_ImplBase {
 	
 	private Pattern[] mPatterns;
 	
@@ -40,14 +40,15 @@ public class URLAnnotator extends JCasAnnotator_ImplBase {
 	      Matcher matcher = mPatterns[i].matcher(docText);
 	      while (matcher.find()) {
 	        // found one - create annotation
-	    	URL annotation = new URL(aJCas);
+	    	Email annotation = new Email(aJCas);
 	        annotation.setBegin(matcher.start());
 	        annotation.setEnd(matcher.end());
 	        annotation.addToIndexes();
-	        annotation.setUrl(docText.substring(annotation.getBegin(), annotation.getEnd()));
+	        annotation.setEmailAddress(docText.substring(annotation.getBegin(), annotation.getEnd()));
 	        getContext().getLogger().log(Level.FINEST, "Found: " + annotation);
 	      }
 	    }
+		
 	}
 
 }

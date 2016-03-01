@@ -1,6 +1,6 @@
 
 /* First created by JCasGen Tue Feb 09 19:38:23 MSK 2016 */
-package edu.kpfu.itis.task1;
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -44,7 +44,7 @@ public class PhoneNumber_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.PhoneNumber");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.models.PhoneNumber");
  
   /** @generated */
   final Feature casFeat_phoneNumber;
@@ -56,7 +56,7 @@ public class PhoneNumber_Type extends Annotation_Type {
    */ 
   public String getPhoneNumber(int addr) {
         if (featOkTst && casFeat_phoneNumber == null)
-      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
+      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.models.PhoneNumber");
     return ll_cas.ll_getStringValue(addr, casFeatCode_phoneNumber);
   }
   /** @generated
@@ -65,7 +65,7 @@ public class PhoneNumber_Type extends Annotation_Type {
    */    
   public void setPhoneNumber(int addr, String v) {
         if (featOkTst && casFeat_phoneNumber == null)
-      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.PhoneNumber");
+      jcas.throwFeatMissing("phoneNumber", "edu.kpfu.itis.task1.models.PhoneNumber");
     ll_cas.ll_setStringValue(addr, casFeatCode_phoneNumber, v);}
     
   

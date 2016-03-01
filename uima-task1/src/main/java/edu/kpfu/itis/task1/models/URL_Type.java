@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Fri Feb 12 20:55:50 MSK 2016 */
-package edu.kpfu.itis.task1;
+/* First created by JCasGen Fri Feb 12 21:43:38 MSK 2016 */
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,9 +14,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Fri Feb 12 20:55:50 MSK 2016
+ * Updated by JCasGen Fri Feb 12 21:43:38 MSK 2016
  * @generated */
-public class Hashtag_Type extends Annotation_Type {
+public class URL_Type extends Annotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -26,47 +26,47 @@ public class Hashtag_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Hashtag_Type.this.useExistingInstance) {
+  			 if (URL_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Hashtag_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = URL_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Hashtag(addr, Hashtag_Type.this);
-  			   Hashtag_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new URL(addr, URL_Type.this);
+  			   URL_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Hashtag(addr, Hashtag_Type.this);
+        } else return new URL(addr, URL_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Hashtag.typeIndexID;
+  public final static int typeIndexID = URL.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.Hashtag");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.kpfu.itis.task1.models.URL");
  
   /** @generated */
-  final Feature casFeat_hashtag;
+  final Feature casFeat_url;
   /** @generated */
-  final int     casFeatCode_hashtag;
+  final int     casFeatCode_url;
   /** @generated
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
-  public String getHashtag(int addr) {
-        if (featOkTst && casFeat_hashtag == null)
-      jcas.throwFeatMissing("hashtag", "edu.kpfu.itis.task1.Hashtag");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_hashtag);
+  public String getUrl(int addr) {
+        if (featOkTst && casFeat_url == null)
+      jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.models.URL");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_url);
   }
   /** @generated
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
-  public void setHashtag(int addr, String v) {
-        if (featOkTst && casFeat_hashtag == null)
-      jcas.throwFeatMissing("hashtag", "edu.kpfu.itis.task1.Hashtag");
-    ll_cas.ll_setStringValue(addr, casFeatCode_hashtag, v);}
+  public void setUrl(int addr, String v) {
+        if (featOkTst && casFeat_url == null)
+      jcas.throwFeatMissing("url", "edu.kpfu.itis.task1.models.URL");
+    ll_cas.ll_setStringValue(addr, casFeatCode_url, v);}
     
   
 
@@ -77,13 +77,13 @@ public class Hashtag_Type extends Annotation_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public Hashtag_Type(JCas jcas, Type casType) {
+  public URL_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_hashtag = jcas.getRequiredFeatureDE(casType, "hashtag", "uima.cas.String", featOkTst);
-    casFeatCode_hashtag  = (null == casFeat_hashtag) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_hashtag).getCode();
+    casFeat_url = jcas.getRequiredFeatureDE(casType, "url", "uima.cas.String", featOkTst);
+    casFeatCode_url  = (null == casFeat_url) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_url).getCode();
 
   }
 }

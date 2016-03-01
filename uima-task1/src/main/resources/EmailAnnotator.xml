@@ -2,7 +2,7 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
-	<annotatorImplementationName>edu.kpfu.itis.task1.EmailAnnotator</annotatorImplementationName>
+	<annotatorImplementationName>edu.kpfu.itis.task1.models.EmailAnnotator</annotatorImplementationName>
 
 	<analysisEngineMetaData>
 		<name>Email Annotator</name>
@@ -41,7 +41,7 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type>edu.kpfu.itis.task1.Email</type>
+					<type>edu.kpfu.itis.task1.models.Email</type>
 					<feature>edu.kpfu.itis.task1.Email:emailAddress</feature>
 				</outputs>
 			<languagesSupported/>

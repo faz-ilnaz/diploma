@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Fri Feb 12 20:55:50 MSK 2016 */
-package edu.kpfu.itis.task1;
+/* First created by JCasGen Tue Feb 09 19:38:23 MSK 2016 */
+package edu.kpfu.itis.task1.models;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,15 +11,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Fri Feb 12 20:55:50 MSK 2016
+ * Updated by JCasGen Tue Feb 09 19:38:23 MSK 2016
  * XML source: C:/Users/ilnaz/workspace/uima-task1/src/main/resources/Task1TypeSystem.xml
  * @generated */
-public class Hashtag extends Annotation {
+public class Email extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Hashtag.class);
+  public final static int typeIndexID = JCasRegistry.register(Email.class);
   /** @generated
    * @ordered 
    */
@@ -33,14 +33,14 @@ public class Hashtag extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Hashtag() {/* intentionally empty block */}
+  protected Email() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
-  public Hashtag(int addr, TOP_Type type) {
+  public Email(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
@@ -48,7 +48,7 @@ public class Hashtag extends Annotation {
   /** @generated
    * @param jcas JCas to which this Feature Structure belongs 
    */
-  public Hashtag(JCas jcas) {
+  public Email(JCas jcas) {
     super(jcas);
     readObject();   
   } 
@@ -58,7 +58,7 @@ public class Hashtag extends Annotation {
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
   */  
-  public Hashtag(JCas jcas, int begin, int end) {
+  public Email(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -77,25 +77,25 @@ public class Hashtag extends Annotation {
  
     
   //*--------------*
-  //* Feature: hashtag
+  //* Feature: emailAddress
 
-  /** getter for hashtag - gets 
+  /** getter for emailAddress - gets 
    * @generated
    * @return value of the feature 
    */
-  public String getHashtag() {
-    if (Hashtag_Type.featOkTst && ((Hashtag_Type)jcasType).casFeat_hashtag == null)
-      jcasType.jcas.throwFeatMissing("hashtag", "edu.kpfu.itis.task1.Hashtag");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Hashtag_Type)jcasType).casFeatCode_hashtag);}
+  public String getEmailAddress() {
+    if (Email_Type.featOkTst && ((Email_Type)jcasType).casFeat_emailAddress == null)
+      jcasType.jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.models.Email");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Email_Type)jcasType).casFeatCode_emailAddress);}
     
-  /** setter for hashtag - sets  
+  /** setter for emailAddress - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setHashtag(String v) {
-    if (Hashtag_Type.featOkTst && ((Hashtag_Type)jcasType).casFeat_hashtag == null)
-      jcasType.jcas.throwFeatMissing("hashtag", "edu.kpfu.itis.task1.Hashtag");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Hashtag_Type)jcasType).casFeatCode_hashtag, v);}    
+  public void setEmailAddress(String v) {
+    if (Email_Type.featOkTst && ((Email_Type)jcasType).casFeat_emailAddress == null)
+      jcasType.jcas.throwFeatMissing("emailAddress", "edu.kpfu.itis.task1.models.Email");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Email_Type)jcasType).casFeatCode_emailAddress, v);}    
   }
 
     

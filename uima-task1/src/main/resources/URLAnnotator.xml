@@ -2,7 +2,7 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
 	<primitive>true</primitive>
-	<annotatorImplementationName>edu.kpfu.itis.task1.URLAnnotator</annotatorImplementationName>
+	<annotatorImplementationName>edu.kpfu.itis.task1.models.URLAnnotator</annotatorImplementationName>
 
 	<analysisEngineMetaData>
 		<name>URL Annotator</name>
@@ -42,7 +42,7 @@
 			<capability>
 				<inputs/>
 				<outputs>
-					<type>edu.kpfu.itis.task1.URL</type>
+					<type>edu.kpfu.itis.task1.models.URL</type>
 					<feature>edu.kpfu.itis.task1.URL:url</feature>
 				</outputs>
 			<languagesSupported/>
